@@ -1,0 +1,9 @@
+.contact_button{
+  padding: 10px 16px 10px 16px;
+  background-color: white;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+}
