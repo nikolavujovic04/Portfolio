@@ -1,10 +1,10 @@
 import '../styles/button.css'
 
-function ContactButton({showArrow = false}: {showArrow?: boolean}) {
+function ContactButton({showArrow = false, variant = 'primary', label = 'Contact Me'}: {showArrow?: boolean, variant?: 'primary' | 'secondary', label?: string}) {
   return(
-    <button className="contact_button">
-      Contact Me
-      {showArrow && <span className="arrow">→</span>}
+    <button className={`contact_button ${variant === 'secondary' ? 'contact_button--secondary' : ''}`}>
+      {label}
+      {showArrow && <span className="arrow">↗</span>}
     </button>
   )
 }

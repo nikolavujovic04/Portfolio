@@ -2,8 +2,33 @@
   padding: 10px 16px 10px 16px;
   background-color: white;
   color: black;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border: none;
-  border-radius: 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.contact_button:hover{
+  opacity: 0.85;
+}
+
+.contact_button--secondary{
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact_button--secondary:hover{
+  border-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.arrow{
+  font-size: 1rem;
 }
