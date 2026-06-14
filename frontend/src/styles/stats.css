@@ -1,0 +1,27 @@
+.stats_section{
+  background-color: grey;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #262626;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+.components{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2{
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 700;
+  color: white;
+}
+p{
+  color: grey;
+}
