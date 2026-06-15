@@ -1,7 +1,7 @@
 .stats_section{
   background-color: grey;
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
