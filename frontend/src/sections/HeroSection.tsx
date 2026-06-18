@@ -9,7 +9,7 @@ const HeroSection = () => {
   return(
     <section className='hero'>
       <div className='hero_left'>
-        <TopButton dot = {true} text = "Available for Freelance projects"/>
+        <TopButton color = 'white' hoverable = {false} dot = {true} text = "Available for Freelance projects"/>
         <h1>Full Stack & <br />
         <span>Android Developer</span></h1>
         <p className='hero_subtitle'>

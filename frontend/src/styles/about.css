@@ -1,0 +1,48 @@
+.about_section{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 200px;
+}
+.about_left{
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about_image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+.about_right{
+  padding-top: 100px;
+  width: 55%;
+  display: flex;
+  align-items: flex-start;  /* TopButton ide uz levu ivicu */
+  flex-direction: column;
+  justify-content: flex-start;  /* ide uz vrh */
+  align-self: flex-start;       /* ne centrira se vertikalno uz sliku */
+  padding-left: 40px;
+}
+
+h2{
+  font-size: xx-large;
+  max-width: 50%;
+}
+p{
+  max-width: 85%;
+}
+span{
+  color: #2ecc71;
+}
+.tech_stack{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tech_margins{
+  margin: 2px;
+}
