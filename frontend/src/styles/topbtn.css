@@ -1,0 +1,17 @@
+.hero_badge{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero_badge_dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}

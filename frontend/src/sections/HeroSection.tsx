@@ -3,15 +3,13 @@ import ContactButton from '../components/ContactButton'
 import heroImage from '../assets/slika.jpg'
 import { Smartphone, Server, Code2, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '../components/icons'
+import TopButton from '../components/TopButton'
 
 const HeroSection = () => {
   return(
     <section className='hero'>
       <div className='hero_left'>
-        <div className='hero_badge'>
-          <span className='hero_badge_dot'></span>
-          Available for Freelance Projects
-        </div>
+        <TopButton dot = {true} text = "Available for Freelance projects"/>
         <h1>Full Stack & <br />
         <span>Android Developer</span></h1>
         <p className='hero_subtitle'>
