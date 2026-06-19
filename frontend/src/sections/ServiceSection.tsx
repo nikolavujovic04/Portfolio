@@ -17,7 +17,7 @@ const card = [
 const ServiceSection = () =>{
   return(
     <div className="service">
-      <TopButton dot = {false} text = "WHAT I DO"></TopButton>
+      <TopButton color='white' hoverable = {false} dot = {false} text = "WHAT I DO"></TopButton>
       <div className="text_service">
         <h2 className="title">Services and solutions I provide</h2>
         <p className="text">From mobile to backend, I cover the full stack of building modern software products.</p>
