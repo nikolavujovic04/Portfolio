@@ -4,6 +4,7 @@ import StatsSection from './sections/StatsSection'
 import ServiceSection from './sections/ServiceSection'
 import AboutSection from './sections/AboutSection'
 import Technologies from './sections/Technologies'
+import ContactSection from './sections/ContactSection'
 import './App.css'
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
       <AboutSection></AboutSection>
     </div>
     <Technologies></Technologies>
+    <div className='app_wrapper'>
+      <ContactSection></ContactSection>
+    </div>
     </>
   )
 }

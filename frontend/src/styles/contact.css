@@ -1,0 +1,45 @@
+.contact_card {
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 30px;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact_card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.211);
+}
+
+.text p:first-child {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.text p:last-child {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  background-color: #2e2e2e;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
