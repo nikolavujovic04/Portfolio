@@ -1,3 +1,48 @@
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact_header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_header h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact_header p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  margin: 0;
+}
+
+.contact_body {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contact_left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 35%;
+}
+
+.contact_right {
+  width: 65%;
+}
+
 .contact_card {
   background-color: #141414;
   display: flex;
@@ -29,11 +74,6 @@
   margin: 0;
 }
 
-.contact_section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .icon {
   background-color: #2e2e2e;
   border-radius: 12px;
@@ -42,4 +82,81 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact_form {
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_row {
+  display: flex;
+  gap: 16px;
+}
+
+.form_row .form_group {
+  flex: 1;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_group label {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form_group input,
+.form_group textarea {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 12px 18px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+.form_group textarea {
+  border-radius: 16px;
+}
+
+.form_group input::placeholder,
+.form_group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.send_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+}
+
+.send_btn:hover {
+  opacity: 0.85;
 }
