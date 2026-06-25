@@ -1,0 +1,112 @@
+.path_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background-color: rgba(74, 73, 73, 0.474);
+  padding: 40px;
+}
+
+.path_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.path_header h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.path_header p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  margin: 0;
+}
+
+.path_timeline {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timeline_line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+}
+
+.timeline_row {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline_dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: #141414;
+  justify-self: center;
+  z-index: 1;
+}
+
+.timeline_left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timeline_right {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.path_card {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.path_year {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.path_title {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.path_subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  margin: 0;
+}
+
+.path_description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
