@@ -40,7 +40,7 @@
   transition: transform 0.8s ease, border-colorc 0.8s ease;
   opacity: 0;
   transform: translateY(30px);
-  transition: transform 0.8s ease, border-color 0.8s ease, opacity 0.6s ease;
+  transition: transform 0.4s ease, border-color 0.4s ease, opacity 0.4s ease;
 }
 
 .service_card.visible {
