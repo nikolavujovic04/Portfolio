@@ -1,6 +1,7 @@
 import '../styles/service.css'
 import ServiceCard from '../components/ServiceCard'
 import { Smartphone, Layers, Globe, Palette, Server, Database } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 import TopButton from '../components/TopButton'
 
 
@@ -13,18 +14,36 @@ const card = [
   { title: "Database Design", text: "Efficient, normalized, and scalable data structures that keep your application fast and reliable.", icon: <Database size={20} color="white" /> },
 ]
 
+const ServiceSection = () => {
+  const cardsRef = useRef<HTMLDivElement>(null)
 
-const ServiceSection = () =>{
-  return(
+  useEffect(() => {
+    const cards = cardsRef.current?.querySelectorAll('.service_card')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    cards?.forEach((card) => observer.observe(card))
+    return () => observer.disconnect()
+  }, [])
+
+  return (
     <div className="service">
-      <TopButton color='white' hoverable = {false} dot = {false} text = "WHAT I DO"></TopButton>
+      <TopButton color='white' hoverable={false} dot={false} text="WHAT I DO" />
       <div className="text_service">
         <h2 className="title">Services and solutions I provide</h2>
         <p className="text">From mobile to backend, I cover the full stack of building modern software products.</p>
       </div>
-      <div className="service_dev">
-        {card.map((item, index)=>(
-          <ServiceCard key = {index} title={item.title} text = {item.text} icon={item.icon}></ServiceCard>
+      <div className="service_dev" ref={cardsRef}>
+        {card.map((item, index) => (
+          <ServiceCard key={index} title={item.title} text={item.text} icon={item.icon} />
         ))}
       </div>
     </div>
