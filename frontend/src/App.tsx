@@ -6,6 +6,7 @@ import AboutSection from './sections/AboutSection'
 import Technologies from './sections/Technologies'
 import ContactSection from './sections/ContactSection'
 import FooterSection from './sections/FooterSection'
+import ProjectsSection from './sections/ProjectsSection'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     </div>
     <Technologies></Technologies>
     <div className='app_wrapper'>
+      <ProjectsSection></ProjectsSection>
       <ContactSection></ContactSection>
       <FooterSection></FooterSection>
     </div>
