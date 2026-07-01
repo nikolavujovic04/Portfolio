@@ -4,9 +4,9 @@ import { GitCommitHorizontal, Mail, Link, MapPin } from 'lucide-react'
 import '../styles/contact.css'
 
 const card_prop = [
-  { title: 'EMAIL', text: 'hello@marko.dev', icon: <Mail size={20} color="white" /> },
-  { title: 'GITHUB', text: 'github.com/marko', icon: <GitCommitHorizontal size={20} color="white" /> },
-  { title: 'LINKEDIN', text: 'in/marko-petrovic', icon: <Link size={20} color="white" /> },
+  { title: 'EMAIL', text: 'nikolavujovickv@gmail.com', icon: <Mail size={20} color="white" /> },
+  { title: 'GITHUB', text: 'github.com/nikolavujovic04', icon: <GitCommitHorizontal size={20} color="white" /> },
+  { title: 'LINKEDIN', text: 'in/nikolavujovic2', icon: <Link size={20} color="white" /> },
   { title: 'LOCATION', text: 'Belgrade, Serbia', icon: <MapPin size={20} color="white" /> }
 ]
 

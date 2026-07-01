@@ -36,7 +36,7 @@ const AboutSection = () => {
         <h2>Engineering software <br/>with <span>curiosity and care</span></h2>
 
         <p>I'm a student at the <span>Faculty of Organizational Sciences</span>, 
-          majoring in Information Systems and Technologies. My passion lies in software engineering — 
+          majoring in Information Systems and Technologies. My passion lies in software engineering - 
           designing systems that are both elegant and reliable.</p>
 
         <p>I focus on <span>mobile and web development</span>, with a growing interest in scalable architectures 

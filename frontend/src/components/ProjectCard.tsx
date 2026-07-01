@@ -1,5 +1,5 @@
 import TopButton from './TopButton'
-import { GitBranch, ExternalLink } from 'lucide-react'
+import { GitBranch } from 'lucide-react'
 import '../styles/projects.css'
 
 export interface ProjectData {
@@ -9,7 +9,6 @@ export interface ProjectData {
   description: string
   tags: string[]
   githubUrl?: string
-  liveUrl?: string
 }
 
 interface ProjectCardProps {
@@ -17,7 +16,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const { category, image, title, description, tags, githubUrl, liveUrl } = project
+  const { category, image, title, description, tags, githubUrl } = project
   return (
     <div className='project_card'>
       <div className='project_image_wrapper'>
@@ -41,13 +40,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {githubUrl && (
             <a href={githubUrl} target="_blank" rel="noreferrer" className='project_btn'>
               <GitBranch size={16} />
-              Code
-            </a>
-          )}
-          {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noreferrer" className='project_btn'>
-              <ExternalLink size={16} />
-              Live Demo
+              View on GitHub
             </a>
           )}
         </div>
