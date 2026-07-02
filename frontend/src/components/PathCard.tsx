@@ -16,12 +16,10 @@ const PathCard = ({ data }: PathCardProps) => {
   const { year, title, subtitle, description, align } = data
   return (
     <div className={`path_card ${align}`}>
-      <div className='path_card_inner'>
-        <span className='path_year'>{year}</span>
-        <h3 className='path_title'>{title}</h3>
-        <p className='path_subtitle'>{subtitle}</p>
-        <p className='path_description'>{description}</p>
-      </div>
+      <span className='path_year'>{year}</span>
+      <h3 className='path_title'>{title}</h3>
+      <p className='path_subtitle'>{subtitle}</p>
+      <p className='path_description'>{description}</p>
     </div>
   )
 }

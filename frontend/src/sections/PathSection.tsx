@@ -1,6 +1,7 @@
 import TopButton from '../components/TopButton'
 import PathCard from '../components/PathCard'
 import type { PathData } from '../components/PathCard'
+import { useEffect, useRef } from 'react'
 import '../styles/path.css'
 
 const paths: PathData[] = [
@@ -42,6 +43,25 @@ const paths: PathData[] = [
 ]
 
 const PathSection = () => {
+  const timelineRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const elements = timelineRef.current?.querySelectorAll('.path_card, .timeline_dot')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    elements?.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className='path_section'>
       <div className='path_header'>
@@ -50,7 +70,7 @@ const PathSection = () => {
         <p>Education, milestones, and the work that shaped me.</p>
       </div>
 
-      <div className='path_timeline'>
+      <div className='path_timeline' ref={timelineRef}>
         <div className='timeline_line' />
         {paths.map((item, index) => (
           <div className='timeline_row' key={index}>

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import TopButton from "../components/TopButton"
 import ProjectCard from "../components/ProjectCard"
 import type { ProjectData } from "../components/ProjectCard"
@@ -51,20 +52,40 @@ const projects: ProjectData[] = [
   },
 ]
 
+
+
 const ProjectsSection = () => {
-  return(
+  const cardsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const cards = cardsRef.current?.querySelectorAll('.project_card')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    cards?.forEach((card) => observer.observe(card))
+    return () => observer.disconnect()
+  }, [])
+
+  return (
     <div className="projects">
-      <TopButton dot={false} text={"PROJECTS"} color={"white"} hoverable={false} ></TopButton>
+      <TopButton dot={false} text={"PROJECTS"} color={"white"} hoverable={false} />
       <h2>Selected work and personal projects</h2>
       <p>A mix of client work and things I've built to learn and explore</p>
       <div className="buttons"></div>
-      <div className="card_section">
-        {projects.map((project, index)=>(
-          <ProjectCard key={index} project={project}></ProjectCard>
+      <div className="card_section" ref={cardsRef}>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </div>
-    
   )
 }
 
